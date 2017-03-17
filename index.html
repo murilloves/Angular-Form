@@ -2,21 +2,10 @@
 <html ng-app="CadastroEmpresa">
 	<meta charset="utf-8">
 	<head>
+	<!-- Importando assets a serem utilizados -->
 		<script src="assets/app.js"></script>
 		<script src="assets/angular.js"></script>
 		<script src="assets/ngMask.min.js"></script>
-		<script type="text/javascript">
-		window.onload = function(){
-		   document.getElementById('send').onclick = function(e){
-		       alert(document.getElementById("name").value);
-		       return false;
-		   }
-		}
-		</script>
-
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
-
 		<script>
 			angular.module("CadastroEmpresa", ['ngMask']);
 			angular.module("CadastroEmpresa").controller("CadastroEmpresaCtrl",
@@ -24,9 +13,13 @@
 				$scope.message = "Olá, nós da Buzzlead gostaríamos de saber mais sobre a sua empresa:";
 			});
 		</script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
+	<!-- Título -->
 		<title>Cadastro Nova Empresa</title>
 	</head>
 
+	<!-- Formulário -->
 	<body ng-controller="CadastroEmpresaCtrl">
 	<div class="jumbotron">
 		<h2 ng-bind="message"></h2>
@@ -84,9 +77,9 @@
 	        </div>
 	    </form>
 	</div>
-
 	</body>
 
+	<!-- Exibindo os dados da Empresa usando alert -->
 	<script>
 		function ExibeDados(){
 			alert_string = '';
@@ -101,6 +94,17 @@
 		}
 	</script>
 
+<!-- Funções que serviram de aprendizado -->
+<!--
+		<script type="text/javascript">
+		window.onload = function(){
+		   document.getElementById('send').onclick = function(e){
+		       alert(document.getElementById("name").value);
+		       return false;
+		   }
+		}
+		</script>
+-->
 <!--
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -110,6 +114,5 @@
 		});
 	</script>
 -->
-
 
 </html>
